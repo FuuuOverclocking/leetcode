@@ -6,6 +6,7 @@
 #include <climits>
 #include <cstring>
 #include <iostream>
+#include <queue>
 #include <stack>
 #include <string>
 #include <string_view>
