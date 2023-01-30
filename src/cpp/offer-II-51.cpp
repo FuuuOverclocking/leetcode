@@ -34,8 +34,7 @@ class Solution {
     }
 
 public:
-    int
-    maxPathSum(TreeNode *root) {
+    int maxPathSum(TreeNode *root) {
         int max_sum = INT_MIN;
         dfs(root, max_sum);
         return max_sum;
