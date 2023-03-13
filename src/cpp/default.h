@@ -5,6 +5,7 @@
 #include <array>
 #include <climits>
 #include <cstring>
+#include <functional>
 #include <iostream>
 #include <queue>
 #include <stack>
