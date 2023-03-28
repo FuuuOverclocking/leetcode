@@ -12,7 +12,7 @@
                 "${workspaceFolder}/target/cpp/${fileBasenameNoExtension}.out", // 输出到build文件夹下
                 "-Wall",
                 "-O0",
-                "-std=c++20",
+                "-std=c++11",
             ],
             "group": {
                 "kind": "build",
