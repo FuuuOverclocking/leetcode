@@ -11,7 +11,7 @@
                 "-o",
                 "${workspaceFolder}/target/cpp/${fileBasenameNoExtension}.out", // 输出到build文件夹下
                 "-Wall",
-                "-fsanitize=address",
+                // "-fsanitize=address",
                 "-O0",
                 "-std=c++20",
             ],
