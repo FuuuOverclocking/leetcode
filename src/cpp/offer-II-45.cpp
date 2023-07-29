@@ -6,7 +6,8 @@ struct TreeNode {
     TreeNode *right;
     TreeNode() : val(0), left(nullptr), right(nullptr) {}
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right)
+        : val(x), left(left), right(right) {}
 };
 
 class Solution {
@@ -15,7 +16,7 @@ public:
         auto [h, val] = dfs(root);
         return val;
     }
-    pair<int, int> dfs(TreeNode* node) {
+    pair<int, int> dfs(TreeNode *node) {
         if (node->left == nullptr && node->right == nullptr) {
             return {1, node->val};
         }
@@ -30,13 +31,11 @@ public:
         auto [h_l, val_l] = dfs(node->left);
         auto [h_r, val_r] = dfs(node->right);
         if (h_l >= h_r) {
-            return {h_l+1, val_l};
+            return {h_l + 1, val_l};
         } else {
             return {h_r + 1, val_r};
         }
     }
 };
 
-int main() {
-    return 0;
-}
+int main() { return 0; }

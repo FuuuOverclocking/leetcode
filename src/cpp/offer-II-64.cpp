@@ -2,6 +2,7 @@
 
 class MagicDictionary {
     unordered_map<size_t, vector<string>> map;
+
 public:
     MagicDictionary() {}
 
@@ -27,6 +28,4 @@ public:
     }
 };
 
-int main() {
-    return 0;
-}
+int main() { return 0; }

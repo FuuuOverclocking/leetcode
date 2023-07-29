@@ -41,7 +41,7 @@ public:
 
 int main() {
     Solution s;
-    vector<int> v {1, -1};
+    vector<int> v{1, -1};
     s.maxSlidingWindow(v, 1);
     return 0;
 }

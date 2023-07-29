@@ -46,8 +46,8 @@ public:
         };
 
         int ret = INT_MAX;
-        // [r] = v, [0..r] 中子数组的最短长度，0 表示还没求值，INT_MAX 表示不存在
-        // dp[r] = min(dp[r-1], len)
+        // [r] = v, [0..r] 中子数组的最短长度，0 表示还没求值，INT_MAX
+        // 表示不存在 dp[r] = min(dp[r-1], len)
         vector<int> dp(arr.size() + 1, 0);
 
         std::function<auto(int r, int len)->void> update_dp;

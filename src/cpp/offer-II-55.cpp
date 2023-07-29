@@ -6,7 +6,8 @@ struct TreeNode {
     TreeNode *right;
     TreeNode() : val(0), left(nullptr), right(nullptr) {}
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right)
+        : val(x), left(left), right(right) {}
 };
 
 class BSTIterator {
@@ -41,15 +42,11 @@ public:
                 break;
             }
         }
-        
+
         return val;
     }
 
-    bool hasNext() {
-        return !stack.empty();
-    }
+    bool hasNext() { return !stack.empty(); }
 };
 
-int main() {
-    return 0;
-}
+int main() { return 0; }

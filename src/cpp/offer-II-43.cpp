@@ -6,7 +6,8 @@ struct TreeNode {
     TreeNode *right;
     TreeNode() : val(0), left(nullptr), right(nullptr) {}
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right)
+        : val(x), left(left), right(right) {}
 };
 
 class CBTInserter {
@@ -15,24 +16,15 @@ class CBTInserter {
     size_t last_full_level_len;
     size_t curr;
 
-    void fill(TreeNode **last_full_level,
-              TreeNode *node,
-              size_t curr_level_idx,
-              size_t target_h,
-              size_t curr_h) {
+    void fill(TreeNode **last_full_level, TreeNode *node, size_t curr_level_idx,
+              size_t target_h, size_t curr_h) {
         if (target_h == curr_h) {
             last_full_level[curr_level_idx] = node;
             return;
         }
-        fill(last_full_level,
-             node->left,
-             curr_level_idx * 2,
-             target_h,
+        fill(last_full_level, node->left, curr_level_idx * 2, target_h,
              curr_h + 1);
-        fill(last_full_level,
-             node->right,
-             curr_level_idx * 2 + 1,
-             target_h,
+        fill(last_full_level, node->right, curr_level_idx * 2 + 1, target_h,
              curr_h + 1);
     }
 
@@ -73,16 +65,14 @@ public:
             new_last_full_level[i * 2] = last_full_level[i]->left;
             new_last_full_level[i * 2 + 1] = last_full_level[i]->right;
         }
-        delete [] last_full_level;
+        delete[] last_full_level;
         last_full_level = new_last_full_level;
         last_full_level_len = new_last_full_level_len;
         curr = 0;
         return node->val;
     }
 
-    TreeNode *get_root() {
-        return root;
-    }
+    TreeNode *get_root() { return root; }
 };
 
 /**

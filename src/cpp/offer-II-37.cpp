@@ -2,8 +2,7 @@
 
 class Solution {
 public:
-    vector<int>
-    asteroidCollision(vector<int> &asteroids) {
+    vector<int> asteroidCollision(vector<int> &asteroids) {
         vector<int> s;
         for (auto num : asteroids) {
             bool reserve = true;

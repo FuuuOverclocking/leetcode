@@ -4,6 +4,6 @@ IndentWidth: 4
 TabWidth: 4
 AllowShortIfStatementsOnASingleLine: AllIfsAndElse
 IndentCaseLabels: false
-ColumnLimit: 0
+ColumnLimit: 80
 AccessModifierOffset: -4
 NamespaceIndentation: All

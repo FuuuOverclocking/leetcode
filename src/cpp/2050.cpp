@@ -15,7 +15,8 @@ class Solution {
         course_min_time[idx] = time[idx];
         int additional_time = 0;
         for (auto i : adj[idx]) {
-            additional_time = max(additional_time, get_course_min_time(i, time));
+            additional_time =
+                max(additional_time, get_course_min_time(i, time));
         }
         course_min_time[idx] += additional_time;
         return course_min_time[idx];
@@ -39,6 +40,4 @@ public:
     }
 };
 
-int main() {
-    return 0;
-}
+int main() { return 0; }

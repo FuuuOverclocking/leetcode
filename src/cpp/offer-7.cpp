@@ -15,13 +15,14 @@ public:
             inorder_map[inorder[i]] = i;
         }
 
-        return buildTreeHelper(preorder, 0, preorder.size() - 1,
-                               inorder, 0, inorder.size() - 1, inorder_map);
+        return buildTreeHelper(preorder, 0, preorder.size() - 1, inorder, 0,
+                               inorder.size() - 1, inorder_map);
     }
 
 private:
     TreeNode *buildTreeHelper(vector<int> &preorder, int p_start, int p_end,
-                              vector<int> &inorder, int i_start, int i_end, unordered_map<int, int> &inorder_map) {
+                              vector<int> &inorder, int i_start, int i_end,
+                              unordered_map<int, int> &inorder_map) {
         if (p_start > p_end || i_start > i_end) {
             return NULL;
         }
@@ -30,11 +31,13 @@ private:
         int i_root = inorder_map[preorder[p_start]];
         int left_tree_size = i_root - i_start;
 
-        root->left = buildTreeHelper(preorder, p_start + 1, p_start + left_tree_size,
-                                     inorder, i_start, i_root - 1, inorder_map);
+        root->left =
+            buildTreeHelper(preorder, p_start + 1, p_start + left_tree_size,
+                            inorder, i_start, i_root - 1, inorder_map);
 
-        root->right = buildTreeHelper(preorder, p_start + left_tree_size + 1, p_end,
-                                      inorder, i_root + 1, i_end, inorder_map);
+        root->right =
+            buildTreeHelper(preorder, p_start + left_tree_size + 1, p_end,
+                            inorder, i_root + 1, i_end, inorder_map);
 
         return root;
     }

@@ -8,7 +8,8 @@ class Solution {
 public:
     int lengthOfLIS(vector<int> &nums) {
         int ret = 0;
-        // tails[i] = a, 则目前为止, 存在长度为 i 的严格单增子序列, 最后一位数字是 a
+        // tails[i] = a, 则目前为止, 存在长度为 i 的严格单增子序列,
+        // 最后一位数字是 a
         vector<int> tails(nums.size() + 1, 0);
 
         for (auto num : nums) {

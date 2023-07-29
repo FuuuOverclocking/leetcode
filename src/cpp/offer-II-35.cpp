@@ -11,9 +11,7 @@ struct Time {
         }
         return false;
     }
-    int operator-(const Time &t) {
-        return (hour - t.hour) * 60 + min - t.min;
-    }
+    int operator-(const Time &t) { return (hour - t.hour) * 60 + min - t.min; }
 };
 
 class Solution {
@@ -50,7 +48,7 @@ public:
 
 int main() {
     Solution solu;
-    vector<string> timePoints {"23:59", "00:00"};
+    vector<string> timePoints{"23:59", "00:00"};
     solu.findMinDifference(timePoints);
     return 0;
 }

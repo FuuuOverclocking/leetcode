@@ -3,11 +3,13 @@
 
 class Solution {
 public:
-    vector<vector<int>> combinationSum(const vector<int> &candidates, int target) {
+    vector<vector<int>> combinationSum(const vector<int> &candidates,
+                                       int target) {
         vector<vector<int>> ret;
         vector<int> combine;
 
-        std::function<auto(int target, vector<int> &combine, int idx)->void> dfs;
+        std::function<auto(int target, vector<int> &combine, int idx)->void>
+            dfs;
         dfs = [&](int target, vector<int> &combine, int idx) -> void {
             if (idx == candidates.size()) {
                 return;
@@ -30,6 +32,4 @@ public:
     }
 };
 
-int main() {
-    return 0;
-}
+int main() { return 0; }

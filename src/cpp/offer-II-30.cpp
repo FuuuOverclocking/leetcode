@@ -3,11 +3,13 @@
 class RandomizedSet {
     vector<int> arr;
     unordered_map<int, int> map;
+
 public:
     /** Initialize your data structure here. */
     RandomizedSet() {}
 
-    /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */
+    /** Inserts a value to the set. Returns true if the set did not already
+     * contain the specified element. */
     bool insert(int val) {
         if (map.count(val) != 0) {
             return false;
@@ -17,7 +19,8 @@ public:
         return true;
     }
 
-    /** Removes a value from the set. Returns true if the set contained the specified element. */
+    /** Removes a value from the set. Returns true if the set contained the
+     * specified element. */
     bool remove(int val) {
         if (map.count(val) == 0) {
             return false;

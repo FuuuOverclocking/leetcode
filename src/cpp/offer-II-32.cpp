@@ -3,7 +3,7 @@
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        if (s.size() != t.size() || s == t){
+        if (s.size() != t.size() || s == t) {
             return false;
         }
         int count[26]{0};

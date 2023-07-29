@@ -22,7 +22,7 @@ public:
             s2.push(l2->val);
             l2 = l2->next;
         }
-        ListNode* curr = nullptr;
+        ListNode *curr = nullptr;
         auto carry = 0;
         while (!(s1.empty() && s2.empty() && carry == 0)) {
             int a = 0;

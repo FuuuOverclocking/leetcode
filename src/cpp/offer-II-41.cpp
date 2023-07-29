@@ -10,9 +10,7 @@ class MovingAverage {
 
 public:
     /** Initialize your data structure here. */
-    MovingAverage(int size) : cap(size) {
-        ring = new int[cap]();
-    }
+    MovingAverage(int size) : cap(size) { ring = new int[cap](); }
 
     double next(int val) {
         sum += val;
@@ -35,6 +33,4 @@ public:
  * double param_1 = obj->next(val);
  */
 
-int main() {
-    return 0;
-}
+int main() { return 0; }

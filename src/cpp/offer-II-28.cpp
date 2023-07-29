@@ -11,8 +11,7 @@ public:
 class Solution {
 public:
     Node *flatten(Node *head) {
-        if (head == nullptr)
-            return nullptr;
+        if (head == nullptr) return nullptr;
         auto [new_head, new_tail]{_flatten(head)};
         return new_head;
     }
