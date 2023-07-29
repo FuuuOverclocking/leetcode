@@ -22,7 +22,7 @@ impl Solution {
             }
             if arr[i] == n3 {
                 p3 += 1;
-            } 
+            }
             if arr[i] == n5 {
                 p5 += 1;
             }

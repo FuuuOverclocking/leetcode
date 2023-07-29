@@ -114,10 +114,8 @@ fn parse_exp(mut s: &[u8]) -> Result<&[u8]> {
 }
 
 fn main() {
-    let ss = vec![
-        "3.".to_string()
-    ];
-    
+    let ss = vec!["3.".to_string()];
+
     for s in ss {
         println!("{}: {}", s, Solution::is_number(s.clone()));
     }

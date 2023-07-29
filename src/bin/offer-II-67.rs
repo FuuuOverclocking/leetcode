@@ -13,7 +13,8 @@ impl Trie {
         let mut node = self;
         for i in (0..31).rev() {
             let bit = (num >> i) & 1;
-            node = node.children[bit as usize].get_or_insert(Default::default());
+            node =
+                node.children[bit as usize].get_or_insert(Default::default());
         }
         node.can_be_end = true;
     }
@@ -48,6 +49,4 @@ impl Solution {
     }
 }
 
-fn main() {
-
-}
+fn main() {}

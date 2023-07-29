@@ -2,7 +2,12 @@ struct Solution {}
 
 impl Solution {
     pub fn find_kth_largest(mut nums: Vec<i32>, k: i32) -> i32 {
-        pub fn find_kth_largest(nums: &mut Vec<i32>, k: usize, l: usize, r: usize) -> i32 {
+        pub fn find_kth_largest(
+            nums: &mut Vec<i32>,
+            k: usize,
+            l: usize,
+            r: usize,
+        ) -> i32 {
             let pivot = nums[l];
             let mut next_pos = l + 1;
 

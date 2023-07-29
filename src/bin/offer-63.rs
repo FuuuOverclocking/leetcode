@@ -8,7 +8,7 @@ impl Solution {
 
         let mut history_max = 0;
         let mut min_before = prices[0];
-        
+
         for p in prices.iter().skip(1) {
             let profit = p - min_before;
             if profit > history_max {

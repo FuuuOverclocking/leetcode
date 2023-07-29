@@ -35,7 +35,8 @@ fn scan(expr: &[u8]) -> Vec<Token> {
             b'0'..=b'9' => {
                 let mut num: f64 = (expr[pos] - b'0') as f64;
                 pos += 1;
-                while pos < expr.len() && expr[pos] >= b'0' && expr[pos] <= b'9' {
+                while pos < expr.len() && expr[pos] >= b'0' && expr[pos] <= b'9'
+                {
                     num = num * 10. + (expr[pos] - b'0') as f64;
                     pos += 1;
                 }
@@ -71,7 +72,12 @@ fn parse_binary_expr(tokens: &[Token], precedence: u8) -> Expr {
         parse_rest(tokens, pos, precedence, left)
     }
 
-    fn parse_rest(tokens: &[Token], pos: &mut usize, precedence: u8, mut left: Expr) -> Expr {
+    fn parse_rest(
+        tokens: &[Token],
+        pos: &mut usize,
+        precedence: u8,
+        mut left: Expr,
+    ) -> Expr {
         while *pos != tokens.len() {
             let op = match tokens[*pos] {
                 Token::Op(op) => op,

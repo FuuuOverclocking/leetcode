@@ -1,8 +1,10 @@
 struct Solution {}
 impl Solution {
     pub fn add_binary(a: String, b: String) -> String {
-        let a: Vec<u8> = a.as_bytes().iter().rev().map(|ch| ch - b'0').collect();
-        let b: Vec<u8> = b.as_bytes().iter().rev().map(|ch| ch - b'0').collect();
+        let a: Vec<u8> =
+            a.as_bytes().iter().rev().map(|ch| ch - b'0').collect();
+        let b: Vec<u8> =
+            b.as_bytes().iter().rev().map(|ch| ch - b'0').collect();
 
         let width = usize::max(a.len(), b.len()) + 1;
         let mut c = vec![0; width];
@@ -22,7 +24,10 @@ impl Solution {
         if *c.last().unwrap() == 0 {
             c.pop();
         }
-        String::from_utf8(c.iter().rev().map(|digit| digit + b'0').collect::<Vec<_>>()).unwrap()
+        String::from_utf8(
+            c.iter().rev().map(|digit| digit + b'0').collect::<Vec<_>>(),
+        )
+        .unwrap()
     }
 }
 

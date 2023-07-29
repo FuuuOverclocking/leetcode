@@ -72,16 +72,15 @@ impl Solution {
                     let ch_l = s[range.0] as usize;
                     if !dict[ch_l] {
                         range.0 += 1;
-                        min_range =
-                            min_range
-                                .or_else(|| Some(range.clone()))
-                                .and_then(|min_range| {
-                                    if range.len() < min_range.len() {
-                                        Some(range.clone())
-                                    } else {
-                                        Some(min_range)
-                                    }
-                                });
+                        min_range = min_range
+                            .or_else(|| Some(range.clone()))
+                            .and_then(|min_range| {
+                                if range.len() < min_range.len() {
+                                    Some(range.clone())
+                                } else {
+                                    Some(min_range)
+                                }
+                            });
 
                         continue;
                     }
@@ -103,7 +102,11 @@ impl Solution {
             }
         }
         if let Some(min_range) = min_range {
-            unsafe { String::from_utf8_unchecked(s[min_range.0..min_range.1].to_vec()) }
+            unsafe {
+                String::from_utf8_unchecked(
+                    s[min_range.0..min_range.1].to_vec(),
+                )
+            }
         } else {
             "".to_string()
         }

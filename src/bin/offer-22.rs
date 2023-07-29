@@ -15,7 +15,10 @@ impl ListNode {
 }
 
 impl Solution {
-    pub fn get_kth_from_end(mut head: Option<Box<ListNode>>, k: i32) -> Option<Box<ListNode>> {
+    pub fn get_kth_from_end(
+        mut head: Option<Box<ListNode>>,
+        k: i32,
+    ) -> Option<Box<ListNode>> {
         let mut fast = &head as *const Option<Box<ListNode>>;
         let mut slow = &mut head as *mut Option<Box<ListNode>>;
         unsafe {

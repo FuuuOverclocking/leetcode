@@ -15,6 +15,4 @@ impl Solution {
     }
 }
 
-fn main() {
-    
-}
+fn main() {}

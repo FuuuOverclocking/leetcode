@@ -1,7 +1,11 @@
 struct Solution {}
 
 impl Solution {
-    pub fn minimum_time(n: i32, mut relations: Vec<Vec<i32>>, time: Vec<i32>) -> i32 {
+    pub fn minimum_time(
+        n: i32,
+        mut relations: Vec<Vec<i32>>,
+        time: Vec<i32>,
+    ) -> i32 {
         let n = n as usize;
         // 邻接表，但是前向
         let adj = {
@@ -16,7 +20,12 @@ impl Solution {
         // 由于 time[i] >= 0，所以 0 可以标记该值无效
         let mut mem = vec![0; n];
 
-        fn eval(i: usize, mem: &mut Vec<i32>, adj: &Vec<Vec<usize>>, time: &Vec<i32>) -> i32 {
+        fn eval(
+            i: usize,
+            mem: &mut Vec<i32>,
+            adj: &Vec<Vec<usize>>,
+            time: &Vec<i32>,
+        ) -> i32 {
             if mem[i] != 0 {
                 return mem[i];
             }
@@ -29,7 +38,10 @@ impl Solution {
             ret
         }
 
-        (0..n).map(|i| eval(i, &mut mem, &adj, &time)).max().unwrap()
+        (0..n)
+            .map(|i| eval(i, &mut mem, &adj, &time))
+            .max()
+            .unwrap()
     }
 }
 

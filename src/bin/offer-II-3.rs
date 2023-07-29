@@ -3,7 +3,7 @@ impl Solution {
     pub fn count_bits(n: i32) -> Vec<i32> {
         let n = n as usize;
         let mut ret = Vec::with_capacity(n + 1);
-        
+
         ret.push(0);
         if n == 0 {
             return ret;

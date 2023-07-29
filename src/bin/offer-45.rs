@@ -24,7 +24,9 @@ impl Solution {
 
         let mut result = String::new();
 
-        nums.sort_by(|&a, &b| Solution::concat(a, b).cmp(&Solution::concat(b, a)));
+        nums.sort_by(|&a, &b| {
+            Solution::concat(a, b).cmp(&Solution::concat(b, a))
+        });
 
         for n in nums {
             write!(&mut result, "{}", n);

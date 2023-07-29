@@ -1,7 +1,8 @@
 struct Solution {}
 impl Solution {
     pub fn max_product(mut words: Vec<String>) -> i32 {
-        let len_arr = words.iter().map(|w| w.as_bytes().len()).collect::<Vec<_>>();
+        let len_arr =
+            words.iter().map(|w| w.as_bytes().len()).collect::<Vec<_>>();
         let words = words
             .iter()
             .map(|word| {

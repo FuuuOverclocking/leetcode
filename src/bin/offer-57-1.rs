@@ -6,7 +6,7 @@ impl Solution {
         }
         let mut l = 0;
         let mut r = nums.len() - 1;
-        
+
         loop {
             let sum = nums[l] + nums[r];
             if sum == target {

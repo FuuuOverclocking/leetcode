@@ -56,7 +56,8 @@ impl Solution {
 
         let mut ret = 0;
         for i in 0..m {
-            ret = ret.max(Solution::largest_rectangle_area(matrix[i].as_bytes()))
+            ret =
+                ret.max(Solution::largest_rectangle_area(matrix[i].as_bytes()))
         }
 
         ret

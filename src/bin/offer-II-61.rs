@@ -3,7 +3,11 @@ use std::{cmp::Reverse, collections::BinaryHeap};
 struct Solution {}
 
 impl Solution {
-    pub fn k_smallest_pairs(nums1: Vec<i32>, nums2: Vec<i32>, k: i32) -> Vec<Vec<i32>> {
+    pub fn k_smallest_pairs(
+        nums1: Vec<i32>,
+        nums2: Vec<i32>,
+        k: i32,
+    ) -> Vec<Vec<i32>> {
         let k = k as usize;
         let mut ret = vec![];
 
@@ -16,7 +20,8 @@ impl Solution {
         }
         impl PartialOrd for Elem {
             fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
-                (self.val_1 + self.val_2).partial_cmp(&(other.val_1 + other.val_2))
+                (self.val_1 + self.val_2)
+                    .partial_cmp(&(other.val_1 + other.val_2))
             }
         }
         impl Ord for Elem {

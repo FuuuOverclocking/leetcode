@@ -7,7 +7,14 @@ impl Solution {
 
         for i in 0..board.len() {
             for j in 0..board[0].len() {
-                if Self::dfs(&mut board, &word, &mut visited, i as isize, j as isize, 0) {
+                if Self::dfs(
+                    &mut board,
+                    &word,
+                    &mut visited,
+                    i as isize,
+                    j as isize,
+                    0,
+                ) {
                     return true;
                 }
             }

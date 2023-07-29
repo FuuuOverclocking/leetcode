@@ -50,7 +50,7 @@ impl NumMatrix {
         } else {
             self.mat[row1 - 1][col1 - 1]
         };
-        
+
         self.mat[row2][col2] - l - t + lt
     }
 }

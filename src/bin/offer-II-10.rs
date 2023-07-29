@@ -9,7 +9,7 @@ impl Solution {
         let mut sum = 0;
 
         map.insert(0, 1);
-        
+
         for val in nums {
             sum += val;
             if let Some(&n) = map.get(&(sum - k)) {

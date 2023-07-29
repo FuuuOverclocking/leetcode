@@ -14,14 +14,18 @@ impl Mul for Mat {
         let mut res = Mat([[0; 2]; 2]);
         let a = self.0;
         let b = rhs.0;
-        res.0[0][0] =
-            ((a[0][0] as i64 * b[0][0] as i64 + a[0][1] as i64 * b[1][0] as i64) % MOD) as i32;
-        res.0[0][1] =
-            ((a[0][0] as i64 * b[0][1] as i64 + a[0][1] as i64 * b[1][1] as i64) % MOD) as i32;
-        res.0[1][0] =
-            ((a[1][0] as i64 * b[0][0] as i64 + a[1][1] as i64 * b[1][0] as i64) % MOD) as i32;
-        res.0[1][1] =
-            ((a[1][0] as i64 * b[0][1] as i64 + a[1][1] as i64 * b[1][1] as i64) % MOD) as i32;
+        res.0[0][0] = ((a[0][0] as i64 * b[0][0] as i64
+            + a[0][1] as i64 * b[1][0] as i64)
+            % MOD) as i32;
+        res.0[0][1] = ((a[0][0] as i64 * b[0][1] as i64
+            + a[0][1] as i64 * b[1][1] as i64)
+            % MOD) as i32;
+        res.0[1][0] = ((a[1][0] as i64 * b[0][0] as i64
+            + a[1][1] as i64 * b[1][0] as i64)
+            % MOD) as i32;
+        res.0[1][1] = ((a[1][0] as i64 * b[0][1] as i64
+            + a[1][1] as i64 * b[1][1] as i64)
+            % MOD) as i32;
         res
     }
 }

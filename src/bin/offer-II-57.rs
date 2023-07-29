@@ -2,7 +2,11 @@ struct Solution {}
 
 use std::collections::HashMap;
 impl Solution {
-    pub fn contains_nearby_almost_duplicate(nums: Vec<i32>, k: i32, t: i32) -> bool {
+    pub fn contains_nearby_almost_duplicate(
+        nums: Vec<i32>,
+        k: i32,
+        t: i32,
+    ) -> bool {
         let k = k as usize;
         let t = t as i64;
         let mut map = HashMap::new();
@@ -49,6 +53,10 @@ impl Solution {
 fn main() {
     println!(
         "{:?}",
-        Solution::contains_nearby_almost_duplicate(vec![2147483647, -1, 2147483647], 1, 2147483647)
+        Solution::contains_nearby_almost_duplicate(
+            vec![2147483647, -1, 2147483647],
+            1,
+            2147483647
+        )
     );
 }

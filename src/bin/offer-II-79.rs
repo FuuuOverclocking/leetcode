@@ -9,7 +9,12 @@ impl Solution {
 
         let len = nums.len();
 
-        fn work(ret: &mut Vec<Vec<i32>>, working: &mut Vec<i32>, nums: &[i32], need: usize) {
+        fn work(
+            ret: &mut Vec<Vec<i32>>,
+            working: &mut Vec<i32>,
+            nums: &[i32],
+            need: usize,
+        ) {
             if need == 1 {
                 for &num in nums {
                     working.push(num);

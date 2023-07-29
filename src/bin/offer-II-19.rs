@@ -8,7 +8,8 @@ impl Solution {
 
         loop {
             if s[l] != s[r] {
-                return valid_palindrome(&s[(l + 1)..(r + 1)]) || valid_palindrome(&s[l..r]);
+                return valid_palindrome(&s[(l + 1)..(r + 1)])
+                    || valid_palindrome(&s[l..r]);
             }
             l += 1;
             r -= 1;

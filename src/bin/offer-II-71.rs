@@ -14,7 +14,7 @@ impl Solution {
         }
         Self { sum, total }
     }
-    
+
     fn pick_index(&self) -> i32 {
         let mut rng = thread_rng();
         let target = rng.gen_range(0..self.total);

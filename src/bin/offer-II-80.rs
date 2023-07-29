@@ -5,7 +5,13 @@ impl Solution {
         let k = k as usize;
         let mut ret = vec![];
 
-        fn work(ret: &mut Vec<Vec<i32>>, working: &mut Vec<i32>, l: i32, n: i32, need: usize) {
+        fn work(
+            ret: &mut Vec<Vec<i32>>,
+            working: &mut Vec<i32>,
+            l: i32,
+            n: i32,
+            need: usize,
+        ) {
             if need == 1 {
                 for num in l..n {
                     working.push(num + 1);

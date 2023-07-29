@@ -8,9 +8,7 @@ struct Pos {
 struct DirGenerator(i32);
 impl DirGenerator {
     fn get(&mut self) -> (i32, i32) {
-        match self.0 {
-            
-        }
+        match self.0 {}
     }
 }
 
